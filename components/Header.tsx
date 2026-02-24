@@ -75,12 +75,12 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl font-semibold text-white">
-              Ece Nalbant
-            </span>
-            <span className="text-accent font-serif text-sm hidden sm:inline">
+          <Link href="/" className="flex items-center gap-1">
+            <span className="font-serif text-xl md:text-2xl font-semibold text-accent tracking-wide">
               Avukat
+            </span>
+            <span className="font-serif text-xl md:text-2xl font-semibold text-white tracking-wide">
+              Ece Nalbant
             </span>
           </Link>
 

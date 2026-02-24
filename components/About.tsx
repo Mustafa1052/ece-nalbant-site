@@ -62,10 +62,10 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              Hukuk eğitimimi Necmettin Erbakan Üniversitesi Hukuk Fakültesi’nde tamamladım. Öğrenim
-              sürecimde, Konya’da faaliyet gösteren uluslararası bir şirkette staj yaparak kurumsal
-              hukuk alanında deneyim edindim. Ardından Balıkesir’e dönerek zorunlu avukatlık stajımı
-              burada tamamladım.
+              Hukuk eğitimini Necmettin Erbakan Üniversitesi Hukuk Fakültesi’nde tamamlamıştır. Öğrenim
+              süreci boyunca, Konya merkezli ve uluslararası faaliyet gösteren bir şirkette staj yaparak
+              kurumsal hukuk alanında deneyim edinmiştir. Ardından Balıkesir’e dönerek zorunlu avukatlık
+              stajını burada tamamlamıştır.
             </motion.p>
             <motion.p
               className="text-primary-dark/90 text-base leading-relaxed mb-6"
@@ -74,9 +74,11 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Mesleki pratiğim süresince özellikle örgütlü suçlar, uyuşturucu ticareti suçları, ağır
-              ceza kapsamındaki suç tipleri ve nitelikli dolandırıcılık dosyalarında çalışma yürüttüm;
-              soruşturma ve kovuşturma süreçlerinde aktif görev aldım.
+              Üniversite hayatı boyunca ceza hukuku alanında suçluların iadesi, ispat hukuku gibi
+              spesifik konularda akademik ve uygulamalı çalışmalar yürütmüş; özel hukuk alanında ise
+              vesayet ve velayet konularına ilişkin klinik çalışmalara katılmıştır. Bu süreç, hem teorik
+              altyapısını güçlendirmiş hem de farklı hukuk disiplinlerinde uygulamaya yönelik kurumsal
+              bir bakış açısı kazanmasını sağlamıştır.
             </motion.p>
             <motion.p
               className="text-primary-dark/90 text-base leading-relaxed mb-6"
@@ -85,12 +87,28 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Ceza hukukundaki birikimimin yanı sıra; aile hukuku, iş hukuku, icra ve iflas hukuku,
-              ticaret hukuku, tüketici hukuku, miras hukuku ve idare hukuku gibi temel hukuk alanlarında
-              da avukatlık ve danışmanlık hizmeti sunmaktayım. Müvekkillerin hukuki ihtiyaçlarına çözüm
-              odaklı, şeffaf ve profesyonel bir yaklaşım benimseyerek; dava süreçlerinin takibi,
-              sözleşme hazırlanması, önleyici hukuk hizmetleri ve genel hukuki danışmanlık konularında
-              kapsamlı destek sağlamaktayım.
+              Mesleki uygulamaları sırasında; örgütlü suçlar, uyuşturucu veya uyarıcı madde imal ve
+              ticareti suçu, nitelikli dolandırıcılık ve diğer ağır ceza yargılamalarına konu suç
+              tiplerinde yoğunlaşarak kapsamlı dosya incelemeleri gerçekleştirmiştir. Bu kapsamda,
+              soruşturma aşamasında delil toplama süreçleri, koruma tedbirlerinin hukuka uygunluk
+              denetimi ve şüpheli müdafiliği; kovuşturma aşamasında ise delil tartışması, beyanların
+              değerlendirilmesi ve hükme ilişkin süreçlerde etkin rol üstlenmiştir. Ceza muhakemesinin
+              teknik gerekliliklerine uygun şekilde stratejik dosya planlaması ve hukuki takip
+              yürütmüştür.
+            </motion.p>
+            <motion.p
+              className="text-primary-dark/90 text-base leading-relaxed mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              Ceza hukuk alanındaki çalışmalarının yanı sıra; aile hukuku, iş hukuku, icra ve iflas
+              hukuku, ticaret hukuku, tüketici hukuku, miras hukuku ve idare hukuku gibi temel hukuk
+              alanlarında da avukatlık ve danışmanlık hizmeti sunmaktadır. Müvekkillerin hukuki
+              ihtiyaçlarına çözüm odaklı, şeffaf ve profesyonel bir yaklaşımla hizmet vermekte; dava
+              süreçlerinin takibi, sözleşme hazırlanması, önleyici hukuk hizmetleri ve genel danışmanlık
+              konularında kapsamlı destek sağlamaktadır.
             </motion.p>
 
             {/* EXPERTISE */}

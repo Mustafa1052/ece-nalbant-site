@@ -11,11 +11,7 @@ const faqs = [
   },
   {
     q: 'Ceza davasında avukat tutmak zorunlu mudur?',
-    a: 'Bazı ağır ceza kapsamındaki suçlarda müdafi zorunludur. Ancak zorunlu olmasa dahi, ceza yargılamasında profesyonel hukuki destek alınması hak kaybını önlemek açısından önemlidir.',
-  },
-  {
-    q: "Balıkesir'de ceza avukatı nasıl seçilir?",
-    a: "Balıkesir'de ceza avukatı seçerken; avukatın ceza hukuku ve özellikle dosyanızla ilgili alandaki (örneğin uyuşturucu suçları, dolandırıcılık) tecrübesi, Baro kaydı ve mesleki etik kurallara uyumu dikkate alınmalıdır. Soruşturma aşamasından itibaren temsil sunabilmesi ve Balıkesir Adliyesi süreçlerine hakim olması yerel davalarda avantaj sağlar. Ön görüşmede somut olayı değerlendirip size uygun strateji sunabilen bir avukat tercih edilmelidir.",
+    a: 'Alt sınırı beş yıldan fazla hapis cezası gerektiren suçlar, çocuklara ilişkin ceza yargılamaları ile şüpheli veya sanığın müdafi talep edemeyecek durumda olduğu hâllerde müdafi görevlendirilmesi zorunludur. Bunun dışında tüm ceza yargılamalarında müdafi zorunluluğu bulunmamakla birlikte, soruşturma ve kovuşturma süreçlerinde profesyonel hukuki yardım alınması, delil değerlendirmesi, usul işlemleri ve hak arama hürriyetinin etkin kullanımı bakımından hak kayıplarının önlenmesi açısından büyük önem taşımaktadır.',
   },
   {
     q: 'Boşanma davası ne kadar sürer?',

@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <h3 className="font-serif text-xl font-semibold text-white mb-4">
-              Av. Ece Nalbant
+              Av. Ece Nalbant Hukuk ve Danışmanlık Bürosu
             </h3>
             <p className="text-cream/80 text-sm leading-relaxed mb-4">
               Balıkesir avukat; ceza hukuku, boşanma davaları ve ticaret hukuku alanında hukuki danışmanlık ve dava takibi hizmeti.
@@ -119,7 +119,7 @@ export function Footer() {
           </Link>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-cream/60 text-sm">
-          © {new Date().getFullYear()} Av. Ece Nalbant. Tüm hakları saklıdır.
+          © {new Date().getFullYear()} Av. Ece Nalbant Hukuk ve Danışmanlık Bürosu. Tüm hakları saklıdır.
         </div>
       </div>
     </footer>

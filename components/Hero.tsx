@@ -25,7 +25,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Av. Ece Nalbant | Balıkesir Avukatlık ve Hukuki Danışmanlık
+          Av. Ece Nalbant Hukuk ve Danışmanlık Bürosu
         </motion.h1>
         <motion.p
           className="text-cream/90 text-lg md:text-xl max-w-2xl mx-auto mb-6"
