@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0F3D2E;
+  --primary-dark: #123B2F;
+  --accent: #C6A75E;
+  --cream: #F5F3EE;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-primary-dark bg-cream antialiased;
+}
+
