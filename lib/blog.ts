@@ -20,6 +20,44 @@ export interface BlogPostMeta {
 
 export const postsMeta: BlogPostMeta[] = [
   {
+    slug: 'hukumet-sistemleri-baskanlik-parlamenter',
+    title: 'HÜKÛMET SİSTEMLERİ (BAŞKANLIK-PARLÂMENTER)',
+    excerpt:
+      'Kuvvetler birliği ve kuvvetler ayrılığı sistemleri ekseninde; başkanlık, yarı-başkanlık ve parlâmenter sistemlerin temel özellikleri, etkileşim araçları ve değerlendirmesi.',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80',
+    date: '25 Şubat 2026',
+    category: 'ceza',
+    keywords: [
+      'hükûmet sistemleri',
+      'başkanlık sistemi',
+      'parlâmenter sistem',
+      'kuvvetler ayrılığı',
+      'kuvvetler birliği',
+      'yarı başkanlık',
+      'rasyonelleştirilmiş parlamenterizm',
+    ],
+  },
+  {
+    slug: 'ispat-hukukuna-dair-genel-degerlendirmeler',
+    title: 'İSPAT HUKUKUNA DAİR GENEL DEĞERLENDİRMELER',
+    excerpt:
+      'İspat hakkı, ispatın konusu, ispatın gerekmediği haller, ispat yükleri ve ispat ölçüsü başlıklarında HMK çerçevesinde genel bir değerlendirme.',
+    image: 'https://images.unsplash.com/photo-1453945619913-79ec89a82c51?w=600&q=80',
+    date: '25 Şubat 2026',
+    category: 'ceza',
+    keywords: [
+      'ispat hukuku',
+      'ispat hakkı',
+      'HMK 187',
+      'ispat yükü',
+      'delil ikame yükü',
+      'karine',
+      'ikrar',
+      'tam ispat',
+      'yaklaşık ispat',
+    ],
+  },
+  {
     slug: 'ceza-hukukunda-savunma-hakki',
     title: 'Ceza Hukukunda Savunma Hakkı: Anayasal ve Uluslararası Boyutuyla Değerlendirme',
     excerpt: 'Ceza hukuku sisteminde savunma hakkı, adil yargılanma ilkesinin temel unsurunu oluşturmaktadır. Anayasa, AİHS ve CMK çerçevesinde değerlendirme.',
