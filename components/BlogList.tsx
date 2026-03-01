@@ -64,7 +64,7 @@ export function BlogList() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="p-6 flex-1 flex flex-col">
+                <div className="p-6 flex-1 flex flex-col items-center text-center">
                   <span className="text-xs font-medium text-accent uppercase tracking-wider">
                     {categoryLabels[item.category]}
                   </span>
@@ -72,7 +72,7 @@ export function BlogList() {
                   <h2 className="font-serif text-xl font-semibold text-primary mt-2 mb-2 group-hover:text-accent transition-colors line-clamp-2">
                     {item.title}
                   </h2>
-                  <p className="text-primary-dark/70 text-sm leading-relaxed line-clamp-3 flex-1">
+                  <p className="text-primary-dark/70 text-sm leading-relaxed line-clamp-3 flex-1 max-w-[95%]">
                     {item.excerpt}
                   </p>
                   <span className="inline-flex items-center mt-4 text-accent font-medium text-sm group-hover:underline">
@@ -84,22 +84,6 @@ export function BlogList() {
           ))}
         </div>
 
-        <section className="mt-14 p-6 bg-white rounded-xl border border-primary/10 text-center">
-          <p className="text-primary-dark/80 text-sm">
-            Balıkesir&apos;de hukuki destek:{' '}
-            <Link href="/balikesir-ceza-avukati" className="text-accent hover:underline font-medium">Balıkesir ceza avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-uyusturucu-avukati" className="text-accent hover:underline font-medium">uyuşturucu ve uyarıcı suçlar avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-dolandiricilik-avukati" className="text-accent hover:underline font-medium">dolandırıcılık suçları avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-bosanma-avukati" className="text-accent hover:underline font-medium">boşanma avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-agir-ceza-avukati" className="text-accent hover:underline font-medium">ağır ceza avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-avukat" className="text-accent hover:underline font-medium">Balıkesir avukat</Link>
-          </p>
-        </section>
       </div>
     </div>
   );

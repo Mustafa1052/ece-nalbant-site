@@ -25,9 +25,9 @@ export function About() {
   return (
     <section id="hakkimda" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
-            className="w-full max-w-[600px] mx-auto rounded-2xl overflow-hidden shadow-lg bg-primary/5"
+            className="w-full max-w-[600px] mx-auto md:self-center rounded-2xl overflow-hidden shadow-lg bg-primary/5"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

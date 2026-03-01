@@ -24,9 +24,6 @@ export function Footer() {
             <p className="text-cream/70 text-xs leading-relaxed mb-4">
               Balıkesir merkez, Karesi ve Altıeylül başta olmak üzere tüm Balıkesir ilçelerinde hukuki danışmanlık hizmeti.
             </p>
-            <p className="text-cream/70 text-xs leading-relaxed mb-4">
-              Balıkesir ceza avukatı, Balıkesir uyuşturucu ve uyarıcı suçlar avukatı ve Balıkesir dolandırıcılık suçları avukatı ihtiyaçlarınız için ceza hukuku, boşanma ve ticaret hukuku alanında Balıkesir&apos;de hizmet veriyoruz.
-            </p>
             <div className="flex gap-4 items-center">
               <a
                 href="https://www.instagram.com/ecenalbant_/"
@@ -63,36 +60,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/balikesir-avukat" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Avukat
-                </Link>
-              </li>
-              <li>
-                <Link href="/balikesir-ceza-avukati" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Ceza Avukatı
-                </Link>
-              </li>
-              <li>
-                <Link href="/balikesir-uyusturucu-avukati" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Uyuşturucu ve Uyarıcı Suçlar Avukatı
-                </Link>
-              </li>
-              <li>
-                <Link href="/balikesir-dolandiricilik-avukati" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Dolandırıcılık Suçları Avukatı
-                </Link>
-              </li>
-              <li>
-                <Link href="/balikesir-agir-ceza-avukati" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Ağır Ceza Avukatı
-                </Link>
-              </li>
-              <li>
-                <Link href="/balikesir-bosanma-avukati" className="text-cream/80 hover:text-accent text-sm transition-colors">
-                  Balıkesir Boşanma Avukatı
-                </Link>
-              </li>
             </ul>
           </div>
           <div>

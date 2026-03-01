@@ -24,7 +24,7 @@ export const postsMeta: BlogPostMeta[] = [
     title: 'HÜKÛMET SİSTEMLERİ (BAŞKANLIK-PARLÂMENTER)',
     excerpt:
       'Kuvvetler birliği ve kuvvetler ayrılığı sistemleri ekseninde; başkanlık, yarı-başkanlık ve parlâmenter sistemlerin temel özellikleri, etkileşim araçları ve değerlendirmesi.',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1575320181282-9afab399332c?w=600&q=80',
     date: '25 Şubat 2026',
     category: 'ceza',
     keywords: [
@@ -42,7 +42,7 @@ export const postsMeta: BlogPostMeta[] = [
     title: 'İSPAT HUKUKUNA DAİR GENEL DEĞERLENDİRMELER',
     excerpt:
       'İspat hakkı, ispatın konusu, ispatın gerekmediği haller, ispat yükleri ve ispat ölçüsü başlıklarında HMK çerçevesinde genel bir değerlendirme.',
-    image: 'https://images.unsplash.com/photo-1453945619913-79ec89a82c51?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&q=80',
     date: '25 Şubat 2026',
     category: 'ceza',
     keywords: [
@@ -56,33 +56,6 @@ export const postsMeta: BlogPostMeta[] = [
       'tam ispat',
       'yaklaşık ispat',
     ],
-  },
-  {
-    slug: 'ceza-hukukunda-savunma-hakki',
-    title: 'Ceza Hukukunda Savunma Hakkı: Anayasal ve Uluslararası Boyutuyla Değerlendirme',
-    excerpt: 'Ceza hukuku sisteminde savunma hakkı, adil yargılanma ilkesinin temel unsurunu oluşturmaktadır. Anayasa, AİHS ve CMK çerçevesinde değerlendirme.',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
-    date: '15 Şubat 2025',
-    category: 'ceza',
-    keywords: ['ceza hukukunda savunma hakkı', 'ceza davasında savunma', 'ceza avukatı', 'müdafi hakkı', 'susma hakkı', 'adil yargılanma hakkı', 'CMK savunma hakkı'],
-  },
-  {
-    slug: 'bosanma-davalarinda-dikkat-edilecekler',
-    title: 'Boşanma Davalarında Dikkat Edilecek Hususlar: Hukuki Süreç ve Stratejik Değerlendirme',
-    excerpt: 'Boşanma davaları, mal rejimi, velayet, nafaka ve tazminat gibi birçok hukuki sonucu beraberinde getiren karmaşık bir yargılama sürecidir.',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
-    date: '10 Şubat 2025',
-    category: 'aile',
-    keywords: ['boşanma davası', 'çekişmeli boşanma', 'anlaşmalı boşanma', 'boşanma avukatı', 'velayet davası', 'nafaka hesaplama', 'mal paylaşımı davası'],
-  },
-  {
-    slug: 'ticari-sozlesmelerde-riskler',
-    title: 'Ticari Sözleşmelerde Riskler: Hukuki ve Stratejik Bir Değerlendirme',
-    excerpt: 'Ticari sözleşmelerde eksiklikler, belirsizlikler veya hukuka aykırılıklar ciddi mali ve hukuki sonuçlara yol açabilmektedir.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-    date: '5 Şubat 2025',
-    category: 'ticaret',
-    keywords: ['ticari sözleşmelerde riskler', 'sözleşme inceleme hizmeti', 'ticari sözleşme danışmanlığı', 'cezai şart riski', 'tahkim şartı riskleri'],
   },
 ];
 

@@ -7,6 +7,10 @@ import { postsMeta } from '@/lib/blog';
 
 export function Blog() {
   const featured = postsMeta.slice(0, 3);
+  const featuredGridClass =
+    featured.length <= 2
+      ? 'grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'
+      : 'grid md:grid-cols-3 gap-8';
 
   return (
     <section id="blog" className="py-20 md:py-28 bg-white">
@@ -24,16 +28,17 @@ export function Blog() {
             Hukuki konularda güncel yazılar ve bilgilendirici içerikler.
           </p>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className={featuredGridClass}>
           {featured.map((item, i) => (
             <motion.article
               key={item.slug}
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <Link href={`/blog/${item.slug}`} className="block group">
+              <Link href={`/blog/${item.slug}`} className="block group text-center">
                 <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-4">
                   <Image
                     src={item.image}
@@ -47,7 +52,7 @@ export function Blog() {
                 <h3 className="font-serif text-xl font-semibold text-primary mt-1 mb-2 group-hover:text-accent transition-colors line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-primary-dark/70 text-sm leading-relaxed line-clamp-3">
+                <p className="text-primary-dark/70 text-sm leading-relaxed line-clamp-3 max-w-[95%] mx-auto">
                   {item.excerpt}
                 </p>
                 <span className="inline-block mt-3 text-accent font-medium text-sm group-hover:underline">
@@ -69,18 +74,6 @@ export function Blog() {
           >
             Tüm yazılar
           </Link>
-          <p className="text-primary-dark/70 text-sm">
-            Balıkesir&apos;de hukuki destek:{' '}
-            <Link href="/balikesir-ceza-avukati" className="text-accent hover:underline font-medium">Balıkesir ceza avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-uyusturucu-avukati" className="text-accent hover:underline font-medium">uyuşturucu ve uyarıcı suçlar avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-dolandiricilik-avukati" className="text-accent hover:underline font-medium">dolandırıcılık suçları avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-bosanma-avukati" className="text-accent hover:underline font-medium">boşanma avukatı</Link>
-            {' · '}
-            <Link href="/balikesir-agir-ceza-avukati" className="text-accent hover:underline font-medium">ağır ceza avukatı</Link>
-          </p>
         </motion.div>
       </div>
     </section>
