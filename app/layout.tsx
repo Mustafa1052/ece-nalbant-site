@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import { LawyerSchema } from '@/components/seo/LawyerSchema';
 
 const playfair = Playfair_Display({
@@ -130,6 +131,7 @@ export default function RootLayout({
         <LawyerSchema />
         <Header />
         <main className="flex-1">{children}</main>
+        <Analytics />
         <FloatingWhatsApp />
         <SpeedInsights />
         <Footer />
