@@ -19,26 +19,38 @@ const inter = Inter({
   display: 'swap',
 });
 
-const siteUrl = 'https://ecenalbat.av.tr';
+const siteUrl = 'https://www.ecenalbant.av.tr';
 
 export const metadata: Metadata = {
-  title: 'Av. Ece Nalbant | Balıkesir Avukat & Ceza Avukatı',
+  title: 'Avukat Ece Nalbant | Balıkesir Avukat',
   description:
-    'Balıkesir avukat arayışınızda; ceza hukuku, boşanma davaları, dolandırıcılık ve uyuşturucu suçları alanında profesyonel hukuki danışmanlık.',
+    'Balıkesir merkezli Avukat Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık hizmetleri sunmaktadır.',
+  metadataBase: new URL(siteUrl),
   keywords:
     'Balıkesir avukat, Balıkesir ceza avukatı, Balıkesir boşanma avukatı, Balıkesir dolandırıcılık avukatı, Balıkesir uyuşturucu avukatı, Balıkesir ağır ceza avukatı, Balıkesir hukuk danışmanlık, avukat Ece Nalbant',
   openGraph: {
-    title: 'Av. Ece Nalbant | Balıkesir Avukat & Ceza Avukatı',
-    description: 'Balıkesir ilinde ceza hukuku, boşanma davaları, dolandırıcılık ve uyuşturucu suçları alanında hukuki danışmanlık.',
+    title: 'Avukat Ece Nalbant | Balıkesir Avukat',
+    description:
+      'Balıkesir merkezli Avukat Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık hizmetleri sunmaktadır.',
     url: siteUrl,
-    siteName: 'Av. Ece Nalbant',
+    siteName: 'Avukat Ece Nalbant',
     type: 'website',
     locale: 'tr_TR',
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Avukat Ece Nalbant | Balıkesir Avukat',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Av. Ece Nalbant | Balıkesir Avukat & Ceza Avukatı',
-    description: 'Balıkesir avukat; ceza, boşanma ve ticaret hukuku alanında hukuki danışmanlık.',
+    title: 'Avukat Ece Nalbant | Balıkesir Avukat',
+    description:
+      'Balıkesir merkezli Avukat Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık hizmetleri sunmaktadır.',
+    images: [`${siteUrl}/og-image.jpg`],
   },
   robots: 'index, follow',
   alternates: { canonical: siteUrl },
