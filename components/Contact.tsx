@@ -163,12 +163,33 @@ function ContactItemIcon({ icon }: { icon: ContactIcon }) {
       </svg>
     );
   }
+  if (icon === 'handshake') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l3 3 5-5m-11 7l5-5m-6-6l4 4m12 8l-4-4M4 8l3-3m10 14l3-3" />
+      </svg>
+    );
+  }
 
   return (
     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
       <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l4 4 6-8M12 3a9 9 0 100 18 9 9 0 000-18z" />
     </svg>
   );
+}
+
+function getDomainLabel(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url.replace(/^https?:\/\//, '').replace(/^www\./, '');
+  }
+}
+
+function getPhoneHref(phone?: string): string | null {
+  if (!phone) return null;
+  const digits = phone.replace(/\D/g, '');
+  return digits ? `tel:${digits}` : null;
 }
 
 export function Contact() {
@@ -357,15 +378,16 @@ export function Contact() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="mt-12 lg:mt-16"
+        <motion.section
+          className="mt-16 lg:mt-20 rounded-2xl p-6 md:p-8 border border-cream/20 bg-gradient-to-br from-primary/95 to-primary/80 shadow-sm"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-6">
+          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white">
             Nasıl Ulaşırım?
           </h3>
+          <div className="w-28 h-px bg-accent/70 mt-3 mb-7" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {institutions.map((institution) => (
@@ -374,19 +396,32 @@ export function Contact() {
                 href={institution.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-lg px-4 py-3 border border-cream/20 hover:border-accent/60 hover:border-l-4 transition-all"
+                className="group rounded-lg px-4 py-4 border border-cream/20 hover:border-accent/60 hover:border-l-4 transition-all"
               >
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3">
                   <span className="text-accent mt-0.5">
                     <ContactItemIcon icon={institution.icon} />
                   </span>
                   <div>
                     <h4 className="font-serif text-base md:text-lg font-semibold text-cream leading-snug group-hover:underline decoration-accent">
-                    {institution.name}
+                      {institution.name}
                     </h4>
                     {institution.phone && (
-                      <p className="text-cream/70 text-sm mt-1">
-                        {institution.phone}
+                      <p className="text-cream/75 text-sm mt-1">
+                        <a
+                          href={getPhoneHref(institution.phone) ?? undefined}
+                          className="hover:underline decoration-accent"
+                        >
+                          {institution.phone}
+                        </a>
+                      </p>
+                    )}
+                    {institution.href && (
+                      <p className="text-cream/65 text-xs mt-1.5">
+                        Website:{' '}
+                        <span className="group-hover:underline decoration-accent">
+                          {getDomainLabel(institution.href)}
+                        </span>
                       </p>
                     )}
                   </div>
@@ -394,17 +429,18 @@ export function Contact() {
               </a>
             ))}
           </div>
-        </motion.div>
+        </motion.section>
 
-        <motion.div
-          className="mt-12 lg:mt-16"
+        <motion.section
+          className="mt-16 lg:mt-20 rounded-xl p-6 md:p-8 border border-accent/20 bg-gradient-to-br from-cream/10 to-accent/10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-6">
+          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white">
             Faydalı Linkler
           </h3>
+          <div className="w-28 h-px bg-accent/70 mt-3 mb-7" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {usefulLinks.map((linkItem) => (
@@ -413,18 +449,23 @@ export function Contact() {
                 href={linkItem.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-lg px-4 py-3 border border-cream/20 hover:border-accent/60 hover:border-l-4 inline-flex items-start gap-3 transition-all"
+                className="group rounded-lg px-4 py-4 border border-cream/20 hover:border-accent/60 hover:border-l-4 inline-flex items-start gap-3 transition-all"
               >
                 <span className="text-accent mt-0.5">
                   <ContactItemIcon icon={linkItem.icon} />
                 </span>
-                <span className="font-serif text-base md:text-lg font-semibold leading-snug text-cream group-hover:underline decoration-accent">
-                  {linkItem.title}
+                <span>
+                  <span className="block font-serif text-base md:text-lg font-semibold leading-snug text-cream group-hover:underline decoration-accent">
+                    {linkItem.title}
+                  </span>
+                  <span className="block text-cream/65 text-xs mt-1">
+                    {getDomainLabel(linkItem.href)}
+                  </span>
                 </span>
               </a>
             ))}
           </div>
-        </motion.div>
+        </motion.section>
       </div>
     </section>
   );
