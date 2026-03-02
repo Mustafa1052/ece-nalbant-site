@@ -9,27 +9,32 @@ const MAP_EMBED_SRC =
 const institutions = [
   {
     name: 'Nöbetçi Noter',
-    website: 'https://www.tnb.org.tr',
+    href: 'https://www.tnb.org.tr',
+    icon: 'building',
   },
   {
     name: 'Balıkesir Adliyesi',
     phone: '0 266 223 00 83',
-    website: 'https://balikesir.adalet.gov.tr',
+    href: 'https://balikesir.adalet.gov.tr',
+    icon: 'courthouse',
   },
   {
     name: 'Balıkesir Barosu',
     phone: '0 266 244 87 33',
-    website: 'https://balikesirbarosu.org.tr',
+    href: 'https://balikesirbarosu.org.tr',
+    icon: 'scale',
   },
   {
     name: 'Kepsut L Tipi Ceza İnfaz Kurumu',
     phone: '0 266 576 20 00',
-    website: 'https://balikesirlik.adalet.gov.tr',
+    href: 'https://balikesirlik.adalet.gov.tr',
+    icon: 'shield',
   },
   {
     name: 'Baro Levhası',
     phone: '0 312 292 59 00',
-    website: 'https://www.barobirlik.org.tr',
+    href: 'https://www.barobirlik.org.tr',
+    icon: 'scale',
   },
 ];
 
@@ -37,36 +42,121 @@ const usefulLinks = [
   {
     title: 'Adalet Bakanlığı Bağlantılar',
     href: 'https://www.adalet.gov.tr/Birimler/ACM',
+    icon: 'scale',
   },
   {
     title: 'Hukuk Sözlüğü',
     href: 'https://sozluk.adalet.gov.tr',
+    icon: 'book',
   },
   {
     title: 'Adalet Dergisi',
     href: 'https://adaletdergisi.adalet.gov.tr',
+    icon: 'file',
   },
   {
     title: 'AİHM Kararları',
     href: 'https://hudoc.echr.coe.int',
+    icon: 'globe',
   },
   {
     title: 'Adli Tıp Kurumu',
     href: 'https://www.atk.gov.tr',
+    icon: 'building',
   },
   {
     title: 'Türkiye Adalet Akademisi',
     href: 'https://taa.gov.tr',
+    icon: 'graduation',
   },
   {
     title: 'Uzlaştırma Portalı',
     href: 'https://alternatifcozumler.adalet.gov.tr',
+    icon: 'handshake',
   },
   {
     title: 'Arabuluculuk Portalı',
     href: 'https://adb.adalet.gov.tr',
+    icon: 'balance-scale',
   },
 ];
+
+type ContactIcon =
+  | 'building'
+  | 'courthouse'
+  | 'scale'
+  | 'shield'
+  | 'book'
+  | 'file'
+  | 'globe'
+  | 'graduation'
+  | 'handshake'
+  | 'balance-scale';
+
+function ContactItemIcon({ icon }: { icon: ContactIcon }) {
+  if (icon === 'building') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-3 7 3v14M9 10h1m4 0h1M9 14h1m4 0h1" />
+      </svg>
+    );
+  }
+  if (icon === 'courthouse') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M4 10h16M12 3l9 4H3l9-4zm-5 7v8m3-8v8m3-8v8m3-8v8m3-8v8" />
+      </svg>
+    );
+  }
+  if (icon === 'scale' || icon === 'balance-scale') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v15m-6 0h12M7 6h10M7 6l-3 5h6L7 6zm10 0l-3 5h6l-3-5zM9 21h6" />
+      </svg>
+    );
+  }
+  if (icon === 'shield') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3z" />
+      </svg>
+    );
+  }
+  if (icon === 'book') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a2 2 0 012-2h11a3 3 0 013 3v13H6a2 2 0 01-2-2V5zm0 12a2 2 0 002 2h14" />
+      </svg>
+    );
+  }
+  if (icon === 'file') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5zM14 3v5h5M9 13h6M9 17h6" />
+      </svg>
+    );
+  }
+  if (icon === 'globe') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 0c2.5 2.4 3.8 5.6 4 9-.2 3.4-1.5 6.6-4 9m0-18C9.5 5.4 8.2 8.6 8 12c.2 3.4 1.5 6.6 4 9m-8-9h16" />
+      </svg>
+    );
+  }
+  if (icon === 'graduation') {
+    return (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-4 9 4-9 4-9-4zm3 3v4l6 3 6-3v-4" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l4 4 6-8M12 3a9 9 0 100 18 9 9 0 000-18z" />
+    </svg>
+  );
+}
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -264,41 +354,31 @@ export function Contact() {
             Nasıl Ulaşırım?
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {institutions.map((institution) => (
-              <div
+              <a
                 key={institution.name}
-                className="bg-white rounded-xl p-5 md:p-6 border border-white/20 shadow-sm"
+                href={institution.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-lg px-4 py-3 border border-cream/20 hover:border-accent/60 hover:border-l-4 transition-all"
               >
                 <div className="flex items-start gap-3 mb-3">
                   <span className="text-accent mt-0.5">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M12 2a7 7 0 00-7 7c0 4.97 6.08 11.95 6.34 12.24a.9.9 0 001.32 0C12.92 20.95 19 13.97 19 9a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
-                    </svg>
+                    <ContactItemIcon icon={institution.icon} />
                   </span>
-                  <h4 className="font-serif text-lg font-semibold text-primary leading-snug">
+                  <div>
+                    <h4 className="font-serif text-base md:text-lg font-semibold text-cream leading-snug group-hover:underline decoration-accent">
                     {institution.name}
-                  </h4>
+                    </h4>
+                    {institution.phone && (
+                      <p className="text-cream/70 text-sm mt-1">
+                        {institution.phone}
+                      </p>
+                    )}
+                  </div>
                 </div>
-
-                {institution.phone && (
-                  <p className="text-primary-dark/80 text-sm mb-2">
-                    Tel: {institution.phone}
-                  </p>
-                )}
-
-                <a
-                  href={institution.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
-                >
-                  Website
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M8 7h9v9" />
-                  </svg>
-                </a>
-              </div>
+              </a>
             ))}
           </div>
         </motion.div>
@@ -313,21 +393,19 @@ export function Contact() {
             Faydalı Linkler
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {usefulLinks.map((linkItem) => (
               <a
                 key={linkItem.title}
                 href={linkItem.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-xl p-5 border border-white/20 shadow-sm inline-flex items-start gap-3 text-primary hover:text-accent/80 transition-colors"
+                className="group rounded-lg px-4 py-3 border border-cream/20 hover:border-accent/60 hover:border-l-4 inline-flex items-start gap-3 transition-all"
               >
                 <span className="text-accent mt-0.5">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2a7 7 0 00-7 7c0 4.97 6.08 11.95 6.34 12.24a.9.9 0 001.32 0C12.92 20.95 19 13.97 19 9a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
-                  </svg>
+                  <ContactItemIcon icon={linkItem.icon} />
                 </span>
-                <span className="font-serif text-base md:text-lg font-semibold leading-snug">
+                <span className="font-serif text-base md:text-lg font-semibold leading-snug text-cream group-hover:underline decoration-accent">
                   {linkItem.title}
                 </span>
               </a>
