@@ -6,6 +6,68 @@ import { motion } from 'framer-motion';
 const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.4347094199697!2d27.889162400000004!3d39.6174149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b70127f647d0a7%3A0x90bfefbaaad0b30!2sAvukat%20Ece%20NALBANT%20Hukuk%20ve%20Dan%C4%B1%C5%9Fmanl%C4%B1k!5e0!3m2!1str!2str!4v1771787158085!5m2!1str!2str';
 
+const institutions = [
+  {
+    name: 'Nöbetçi Noter',
+    website: 'https://www.tnb.org.tr',
+  },
+  {
+    name: 'Balıkesir Adliyesi',
+    phone: '0 266 223 00 83',
+    website: 'https://balikesir.adalet.gov.tr',
+  },
+  {
+    name: 'Balıkesir Barosu',
+    phone: '0 266 244 87 33',
+    website: 'https://balikesirbarosu.org.tr',
+  },
+  {
+    name: 'Kepsut L Tipi Ceza İnfaz Kurumu',
+    phone: '0 266 576 20 00',
+    website: 'https://balikesirlik.adalet.gov.tr',
+  },
+  {
+    name: 'Baro Levhası',
+    phone: '0 312 292 59 00',
+    website: 'https://www.barobirlik.org.tr',
+  },
+];
+
+const usefulLinks = [
+  {
+    title: 'Adalet Bakanlığı Bağlantılar',
+    href: 'https://www.adalet.gov.tr/Birimler/ACM',
+  },
+  {
+    title: 'Hukuk Sözlüğü',
+    href: 'https://sozluk.adalet.gov.tr',
+  },
+  {
+    title: 'Adalet Dergisi',
+    href: 'https://adaletdergisi.adalet.gov.tr',
+  },
+  {
+    title: 'AİHM Kararları',
+    href: 'https://hudoc.echr.coe.int',
+  },
+  {
+    title: 'Adli Tıp Kurumu',
+    href: 'https://www.atk.gov.tr',
+  },
+  {
+    title: 'Türkiye Adalet Akademisi',
+    href: 'https://taa.gov.tr',
+  },
+  {
+    title: 'Uzlaştırma Portalı',
+    href: 'https://alternatifcozumler.adalet.gov.tr',
+  },
+  {
+    title: 'Arabuluculuk Portalı',
+    href: 'https://adb.adalet.gov.tr',
+  },
+];
+
 export function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -191,6 +253,87 @@ export function Contact() {
             )}
           </motion.div>
         </div>
+
+        <motion.div
+          className="mt-12 lg:mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-6">
+            Nasıl Ulaşırım?
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {institutions.map((institution) => (
+              <div
+                key={institution.name}
+                className="bg-white rounded-xl p-5 md:p-6 border border-white/20 shadow-sm"
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-accent mt-0.5">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2a7 7 0 00-7 7c0 4.97 6.08 11.95 6.34 12.24a.9.9 0 001.32 0C12.92 20.95 19 13.97 19 9a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+                    </svg>
+                  </span>
+                  <h4 className="font-serif text-lg font-semibold text-primary leading-snug">
+                    {institution.name}
+                  </h4>
+                </div>
+
+                {institution.phone && (
+                  <p className="text-primary-dark/80 text-sm mb-2">
+                    Tel: {institution.phone}
+                  </p>
+                )}
+
+                <a
+                  href={institution.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+                >
+                  Website
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="mt-12 lg:mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-6">
+            Faydalı Linkler
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {usefulLinks.map((linkItem) => (
+              <a
+                key={linkItem.title}
+                href={linkItem.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-5 border border-white/20 shadow-sm inline-flex items-start gap-3 text-primary hover:text-accent/80 transition-colors"
+              >
+                <span className="text-accent mt-0.5">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2a7 7 0 00-7 7c0 4.97 6.08 11.95 6.34 12.24a.9.9 0 001.32 0C12.92 20.95 19 13.97 19 9a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+                  </svg>
+                </span>
+                <span className="font-serif text-base md:text-lg font-semibold leading-snug">
+                  {linkItem.title}
+                </span>
+              </a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
