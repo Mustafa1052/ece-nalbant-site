@@ -15,7 +15,7 @@ export const metadata = {
 export default function BalikesirAvukatPage() {
   return (
     <div className="min-h-screen bg-cream pt-24 pb-16">
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 [&_p]:text-justify [&_p]:hyphens-auto [&_p]:break-words [&_p]:[overflow-wrap:anywhere] [&_p]:leading-relaxed md:[&_p]:leading-7">
         <Link
           href="/"
           className="text-accent hover:underline text-sm font-medium mb-6 inline-block"
