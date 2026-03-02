@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { postsMeta } from '@/lib/blog';
 
-const baseUrl = 'https://ecenalbat.av.tr';
+const baseUrl = 'https://www.ecenalbant.av.tr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

@@ -96,7 +96,7 @@ const usefulLinks: UsefulLinkItem[] = [
   },
 ];
 
-function ContactItemIcon({ icon }: { icon: ContactIcon }) {
+function ContactItemIcon({ icon }: { icon: string }) {
   if (icon === 'building') {
     return (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">

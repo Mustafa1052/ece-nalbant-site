@@ -16,7 +16,7 @@ import {
 import { BlogTOC } from '@/components/BlogTOC';
 import { BlogShare } from '@/components/BlogShare';
 
-const siteUrl = 'https://ecenalbat.av.tr';
+const siteUrl = 'https://www.ecenalbant.av.tr';
 
 export async function generateStaticParams() {
   return postsMeta.map((p) => ({ slug: p.slug }));
