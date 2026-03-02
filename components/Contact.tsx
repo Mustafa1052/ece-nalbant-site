@@ -390,7 +390,7 @@ export function Contact() {
               >
                 <div className="flex items-start gap-3">
                   <span className="text-accent mt-0.5">
-                    <ContactItemIcon icon={institution.icon} />
+                    <ContactItemIcon icon={institution.icon as ContactIcon} />
                   </span>
                   <div>
                     <h4 className="font-serif text-base md:text-lg font-semibold text-cream leading-snug group-hover:underline decoration-accent">
@@ -442,7 +442,7 @@ export function Contact() {
                 className="group rounded-lg px-4 py-4 border border-cream/20 hover:border-accent/60 hover:border-l-4 inline-flex items-start gap-3 transition-all"
               >
                 <span className="text-accent mt-0.5">
-                  <ContactItemIcon icon={linkItem.icon} />
+                  <ContactItemIcon icon={linkItem.icon as ContactIcon} />
                 </span>
                 <span>
                   <span className="block font-serif text-base md:text-lg font-semibold leading-snug text-cream group-hover:underline decoration-accent">
