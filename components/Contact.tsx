@@ -6,17 +6,7 @@ import { motion } from 'framer-motion';
 const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.4347094199697!2d27.889162400000004!3d39.6174149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b70127f647d0a7%3A0x90bfefbaaad0b30!2sAvukat%20Ece%20NALBANT%20Hukuk%20ve%20Dan%C4%B1%C5%9Fmanl%C4%B1k!5e0!3m2!1str!2str!4v1771787158085!5m2!1str!2str';
 
-type ContactIcon =
-  | 'building'
-  | 'courthouse'
-  | 'scale'
-  | 'shield'
-  | 'book'
-  | 'file'
-  | 'globe'
-  | 'graduation'
-  | 'handshake'
-  | 'balance-scale';
+type ContactIcon = string;
 
 type InstitutionItem = {
   name: string;
