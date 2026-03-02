@@ -56,7 +56,7 @@ export function About() {
 
             {/* BIOGRAPHY */}
             <motion.p
-              className="text-primary-dark/90 text-base leading-relaxed mb-6"
+              className="text-primary-dark/90 text-base leading-relaxed md:leading-7 text-justify hyphens-auto break-words [overflow-wrap:anywhere] mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -68,7 +68,7 @@ export function About() {
               stajını burada tamamlamıştır.
             </motion.p>
             <motion.p
-              className="text-primary-dark/90 text-base leading-relaxed mb-6"
+              className="text-primary-dark/90 text-base leading-relaxed md:leading-7 text-justify hyphens-auto break-words [overflow-wrap:anywhere] mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -81,7 +81,7 @@ export function About() {
               bir bakış açısı kazanmasını sağlamıştır.
             </motion.p>
             <motion.p
-              className="text-primary-dark/90 text-base leading-relaxed mb-6"
+              className="text-primary-dark/90 text-base leading-relaxed md:leading-7 text-justify hyphens-auto break-words [overflow-wrap:anywhere] mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -97,7 +97,7 @@ export function About() {
               yürütmüştür.
             </motion.p>
             <motion.p
-              className="text-primary-dark/90 text-base leading-relaxed mb-6"
+              className="text-primary-dark/90 text-base leading-relaxed md:leading-7 text-justify hyphens-auto break-words [overflow-wrap:anywhere] mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

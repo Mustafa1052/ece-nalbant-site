@@ -183,6 +183,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               style={{ maxWidth: isStyledLegalPost ? '760px' : '800px' }}
             >
               {content.blocks.map((block, i) => {
+                const articleParagraphBaseClasses =
+                  'text-justify hyphens-auto break-words [overflow-wrap:anywhere] leading-relaxed md:leading-7';
                 const isGovernmentTOCLine =
                   isQuotedGovernmentPost && block.type === 'p' && block.text.includes('................................................................');
                 const isGovernmentFootnoteLine =
@@ -243,12 +245,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                             isGovernmentTOCLine
                               ? 'whitespace-pre-line font-medium text-primary/75 text-[13px] md:text-sm'
                               : isGovernmentFootnoteLine
-                                ? 'whitespace-pre-line text-primary-dark/55 text-xs md:text-[13px] leading-[1.7] italic'
+                                ? `whitespace-pre-line text-primary-dark/55 text-xs md:text-[13px] italic ${articleParagraphBaseClasses}`
                                 : isGovernmentNumberedItem
-                                  ? 'text-primary-dark/90 text-[15px] md:text-base text-justify border-l-2 border-accent/20 pl-3'
-                                  : 'text-primary-dark/90 text-[15px] md:text-base text-justify'
+                                  ? `text-primary-dark/90 text-[15px] md:text-base border-l-2 border-accent/20 pl-3 ${articleParagraphBaseClasses}`
+                                  : `text-primary-dark/90 text-[15px] md:text-base ${articleParagraphBaseClasses}`
                           }`
-                        : 'text-primary-dark/90'
+                        : `text-primary-dark/90 ${articleParagraphBaseClasses}`
                     }`}
                   >
                     {isGovernmentFootnoteLine && footnoteNumber ? (

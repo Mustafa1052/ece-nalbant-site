@@ -22,16 +22,16 @@ const inter = Inter({
 const siteUrl = 'https://www.ecenalbant.av.tr';
 
 export const metadata: Metadata = {
-  title: 'Avukat Ece Nalbant | Balıkesir Avukat',
+  title: 'Av. Ece Nalbant | Hukuk ve Danışmanlık',
   description:
-    'Balıkesir merkezli Avukat Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık hizmetleri sunmaktadır.',
+    'Balıkesir merkezli Av. Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık alanlarında hizmet sunmaktadır.',
   metadataBase: new URL(siteUrl),
   keywords:
     'Balıkesir avukat, Balıkesir ceza avukatı, Balıkesir boşanma avukatı, Balıkesir dolandırıcılık avukatı, Balıkesir uyuşturucu avukatı, Balıkesir ağır ceza avukatı, Balıkesir hukuk danışmanlık, avukat Ece Nalbant',
   openGraph: {
-    title: 'Avukat Ece Nalbant | Balıkesir Avukat',
+    title: 'Av. Ece Nalbant | Hukuk ve Danışmanlık',
     description:
-      'Balıkesir merkezli Avukat Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık hizmetleri sunmaktadır.',
+      'Balıkesir merkezli Av. Ece Nalbant; ceza hukuku, boşanma davaları ve hukuki danışmanlık alanlarında hizmet sunmaktadır.',
     url: siteUrl,
     siteName: 'Avukat Ece Nalbant',
     type: 'website',
